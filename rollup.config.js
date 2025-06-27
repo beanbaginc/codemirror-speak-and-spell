@@ -1,13 +1,18 @@
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
+import { terser } from 'rollup-plugin-terser';
+
+import { version } from './package.json';
 
 
+const pkgName = 'beanbag-codemirror-speak-and-spell';
 const cmBuilds = ['cm5'];
 
 const extensions = ['.ts'];
 const globalsMap = {
     'codemirror': 'CodeMirror',
 };
+
 
 
 export default cmBuilds.map(cmBuild => ({
@@ -38,6 +43,21 @@ export default cmBuilds.map(cmBuild => ({
             format: 'cjs',
             globals: globalsMap,
             sourcemap: true,
+        },
+        {
+            file: `build/${pkgName}-${cmBuild}-${version}.js`,
+            format: 'umd',
+            globals: globalsMap,
+            sourcemap: 'inline',
+        },
+        {
+            file: `build/${pkgName}-${cmBuild}-${version}.min.js`,
+            format: 'umd',
+            globals: globalsMap,
+            sourcemap: 'inline',
+            plugins: [
+                terser(),
+            ],
         },
     ],
     plugins: [
