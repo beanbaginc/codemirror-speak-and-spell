@@ -1,6 +1,6 @@
 {
     "name": "@beanbag/codemirror-speak-and-spell",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Browser-native spell checking, AI writing, and more in CodeMirror v5",
     "homepage": "https://github.com/beanbaginc/codemirror-speak-and-spell",
     "github": "https://github.com/beanbaginc/codemirror-speak-and-spell",

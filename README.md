@@ -21,13 +21,13 @@ any time text is being inserted or replaced by the browser.
 
 There are two ways you can use this plugin:
 
-1. Simply download the latest script from our releases and embed it in your
-   page.
+1. Simply download the latest script from our releases or our repository's
+  `build/` directory and embed it in your page.
 
    For example:
 
    ```html
-   <script src="/js/codemirror-speak-and-spell-1.0.min.js"></script>
+   <script src="/js/beanbag-codemirror-speak-and-spell-cm5-1.0.0.min.js"></script>
    ```
 
 2. Alternatively, install using `npm`:
