@@ -1,0 +1,11 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "plugin:@beanbag/recommended"
+    ],
+    "plugins": [
+        "@beanbag"
+    ]
+}
