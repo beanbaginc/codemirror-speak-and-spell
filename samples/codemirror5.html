@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <title>CodeMirror 5 Speak-and-Spell Demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/codemirror@5/lib/codemirror.css">
+  <style>
+   body {
+     padding: 1em;
+   }
+
+   .CodeMirror {
+     border: 1px #999 solid;
+     border-radius: 4px;
+   }
+  </style>
+  <script src="https://unpkg.com/codemirror@5/lib/codemirror.js"></script>
+  <script src="../lib/cm5/index.js"></script>
+ </head>
+ <body>
+  <textarea id="code">
+This is a tset.
+
+See how that had a spelling isue? Oh and that tooo.
+
+Play around and have fun.
+</textarea>
+  <script>
+  CodeMirror.fromTextArea(document.getElementById("code"), {
+    inputStyle: 'contenteditable',
+    mode: {
+      highlightFormatting: true,
+      name: 'gfm',
+    },
+    speakAndSpell: true,
+    spellcheck: true,
+    theme: 'default',
+  });
+</script>
+ </body>
+</html>
